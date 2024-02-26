@@ -43,7 +43,7 @@ const without = function(array1, array2) {
    
   }
 
-  console.log(result);
+  return result;
 };
 
 
