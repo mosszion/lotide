@@ -10,16 +10,31 @@ const assertEqual = function(actual, expected) {
   
 };
 
-const tail = function(arr) {
-  const arr2 = [];
+const tail = function(word) {
+  if (word.length <= 1) {
+    return [];
+
+  } else {
+    const tailed = [];
   
-  for (let i = 1; i < arr.length; i++) {
-    arr2.push(arr[i]);
+    for (let i = 1; i < word.length; i++) {
+      tailed.push(word[i]);
+    }
+    return tailed;
 
   }
-  console.log(arr2);
+  
  
 };
 
-tail([1,2,3]);
-tail(['jello','hallo','sup']);
+
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+const result2 = tail(["Hello"]);
+console.log(result2);
+assertEqual(result.length, 2);
+assertEqual(result[0],"Lighthouse");
+assertEqual(result[1],"Labs");
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+const newWord = tail(words);
+assertEqual(words.length, 3);
+assertEqual(newWord.length, 2);
