@@ -13,11 +13,11 @@ const assertEqual = function(actual, expected) {
 
 const eqArrays = function(firstArr, secondArr) {
   for(let i = 0; i < firstArr.length; i++){
-    if(firstArr[i] === secondArr[i]){
-      return true;
-    } else {
+    let isEqual = true;
+    if(firstArr[i] !== secondArr[i]){
       return false;
     }
+  return true;
   }
 };
 
