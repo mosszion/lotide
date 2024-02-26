@@ -12,13 +12,17 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(firstArr, secondArr) {
+ if(firstArr.length === secondArr.length){
   for(let i = 0; i < firstArr.length; i++){
     let isEqual = true;
     if(firstArr[i] !== secondArr[i]){
-      return false;
+      isEqual = false;
     }
-  return true;
+  return isEqual;
   }
+ } else {
+   return false;
+ }
 };
 
 
