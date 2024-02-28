@@ -18,26 +18,21 @@ const countOnly = function(arrayNames, namesToCount) {
   };
  
 
-  let keys = [];
-  for (let key in namesToCount) {
-    keys.push(key);
-  }
   if (arrayNames.length < 1) {
     return `😱 Ohh no !! No one has attended sofar!!`;
   } else {
     for (let i = 0; i < arrayNames.length; i++) {
-      for (let j = 0; j < keys.length; j ++) {
-        if (arrayNames[i] === keys[j]) {
+      if (namesToCount[arrayNames[i]]) {
      
-          if (namesToCount[keys[j]]) {
+          
             
   
-            countedItem[keys[j]] = (countedItem[keys[j]] || 0) + 1;
+        countedItem[arrayNames[i]] = (countedItem[arrayNames[i]] || 0) + 1;
             
             
             
-          }
-        }
+          
+        
       }
     }
     return countedItem;
