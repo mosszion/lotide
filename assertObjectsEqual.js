@@ -14,14 +14,14 @@ const assertEqual = function(actual, expected) {
 };
 const eqArrays = function(firstArr, secondArr) {
   if(firstArr.length === secondArr.length){
-   let isEqual = true;
+   
    for(let i = 0; i < firstArr.length; i++){
     
      if(firstArr[i] !== secondArr[i]){
-       isEqual = false;
+       return false;
      }
    }
-   return isEqual;
+   return true;
   } else {
    return false;
   }
@@ -45,9 +45,8 @@ const eqObjects = function (object1, object2) {
       }
 
       } else { // if primitive value use this code
-        if (object1[key] === object2[key]){
+        if (object1[key] !== object2[key]){
         
-        } else {
           eqObject = false;
         }
 
