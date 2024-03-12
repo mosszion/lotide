@@ -13,15 +13,15 @@ const eqArrays = function(firstArr, secondArr) {
   }
  };
 
- const assertArraysEqual = function(arr1, arr2) {
+ const assertArraysEqual = function(arr1, arr2) {  //intialize an assertArraysEqual fn with two array arguments
   let result = eqArrays(arr1, arr2);
-  if(result) {
-    console.log(`✅✅✅ Test Passed: Arrays are equal.`);
+  if(result) {     // check if arr1 is equal to arr2
+    console.log(`✅✅✅ Test Passed: ${arr1} === ${arr2} : Arrays are equal.`); // if equal return this message
   } else {
-    console.log(`❌❌❌ Test Failed: Arrays are not equal.`);
+    console.log(`❌❌❌ Test Failed: ${arr1} !== ${arr2} :Arrays are not equal.`); // else return this message
   }
  }
 
- assertArraysEqual([1,2,3], [1,2,3]);
- assertArraysEqual([1,2,3], [1,2,"3"]);
- assertArraysEqual([1,2,3], [1,2,5]);
+ assertArraysEqual([1,2,3], [1,2,3]); //Test Passed
+ assertArraysEqual([1,2,3], [1,2,"3"]); //Test Failed
+ assertArraysEqual([1,2,3], [1,2,5]); //Test Failed
