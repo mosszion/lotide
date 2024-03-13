@@ -22,7 +22,7 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const without = function(array1, array2) {
+const withOut = function(array1, array2) {
   let result = [];
   
   for (let i = 0; i < array1.length; i++) {
@@ -47,10 +47,10 @@ const without = function(array1, array2) {
 };
 
 
-without([1,2,3,4], [2,4]);
+withOut([1,2,3,4], [2,4]);
 
 const words = ["hello", "world", "lighthouse"];
-const trimmed = without(words, ["lighthouse"]);
+const trimmed = withOut(words, ["lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 assertArraysEqual(words, trimmed);

@@ -9,7 +9,7 @@ const middle = require('../middle');          //Imports middle fn
 
 describe("#middle", () => {
   it("returns [2] for middle of [1,2,3] ", () => {
-    assert.deepEqual(middle([1,2,3]),[2]); //isTrue used for equal arrays
+    assert.deepEqual(middle([1,2,3]),[2]); //deepEqual used for equal arrays
   });
   it("returns [2,3] for middle of [1,2,3,4]", () => {
     assert.deepEqual(middle([1,2,3,4]),[2,3]);
