@@ -9,5 +9,6 @@ const assertEqual = function(actual, expected) {  // assertEqual takes two liter
 
   
 };
-assertEqual("Lighthouse Labs", "Bootcmp");
-assertEqual(1, 1);
+
+
+module.exports = assertEqual;
