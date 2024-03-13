@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {  // assertEqual takes two literals, actual and expected
+const assertEqual = function(actual, expected) {  // argument takes two primitives 
   
   if (actual === expected) {        //checks if they are equal
     console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`); //consoles pass message

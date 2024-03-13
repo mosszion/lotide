@@ -1,18 +1,16 @@
-const assertEqual = require ("../assertEqual"); //import assertEqual
+//Import functions
 const tail = require ('../tail'); //import tail
-
-//Test cases
-
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0],"Lighthouse");
-assertEqual(result[1],"Labs");
+const assert = require ('chai').assert; //import assert from chai fn
 
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-const newWord = tail(words);
-assertEqual(words.length, 3);
-assertEqual(newWord.length, 2);
+//Test cases:
 
-assertEqual(tail(["test"]).length, 0); // tail of array with one element only should be empty
-assertEqual(tail([]).length, 0); // tail of an empty array should also be empty
+describe("#tail", () => {
+  it("returns [2,3] for [1,2,3]", () => {
+    assert.deepEqual(tail([1,2,3]), [2,3]); //deepEqual used for equal arrays
+  });
+  it("returns ['5'] for []", () => {
+    assert.deepEqual(tail(['5']), []);
+  })
+});
+

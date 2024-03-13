@@ -9,7 +9,7 @@ const middle = function(ary) { //takes array input
     let half = ary.length / 2;  //divide length into half
     if (ary.length % 2 === 0) { //check if even number elements
       
-      return [ary[half - 1],ary[half]]; //returns two middle values for even
+      return [ary[half - 1],ary[half]]; //returnsnpm two middle values for even
     } else {
       return [ary[Math.floor(half)]];  //returns one middle for odd numbered
 

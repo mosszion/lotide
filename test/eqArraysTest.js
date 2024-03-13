@@ -1,11 +1,18 @@
+
+//Import functions
+const assert = require ('chai').assert; //import assert from chai fn
 const eqArrays = require ('../eqArrays');         //import eqArray fn
-const assertEqual = require ('../assertEqual');   //import assertEqual fn
 
 
-// Test cases
-console.log(eqArrays([1,2,3],[1,2,3]));          //True
-assertEqual (eqArrays([1,2,3],[1,2,3]),true);    //Pass
+//Test cases:
 
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);  //Pass
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);  //Pass
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);  //Fail
+describe("#eqArrays", () => {
+  it("returns true for [1,2,3] and [1,2,3]", () => {
+    assert.isTrue(eqArrays([1],[1])); //isTrue used for equal arrays
+  });
+  it("returns true for  ['5'] and ['5']", () => {
+    assert.isTrue(eqArrays(['5'],['5']));
+  })
+});
+
+

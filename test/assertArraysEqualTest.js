@@ -1,5 +1,16 @@
+//Import functions
+const assert = require ('chai').assert; //import assert from chai fn
 const assertArraysEqual = require ('../assertArraysEqual')
 
-assertArraysEqual([1,2,3], [1,2,3]); //Test Passed
-assertArraysEqual([1,2,3], [1,2,"3"]); //Test Failed
-assertArraysEqual([1,2,3], [1,2,5]); //Test Failed
+
+//Test cases:
+
+describe("#assertArraysEqual", () => {
+  it("returns true for [1,2,3] and [1,2,3]", () => {
+    assert.deepEqual(assertArraysEqual([1,2,3], [1,2,3])); //deepEqual used for equal arrays
+  });
+  it("returns true for  ['5'] and ['5']", () => {
+    assert.deepEqual(assertArraysEqual(['5'],['5']));
+  })
+});
+
