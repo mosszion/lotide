@@ -4,12 +4,8 @@ const tail = function(word) { //takes input array
     return [];                //returns empty array 
 
   } else {
-    const tailed = [];
-  
-    for (let i = 1; i < word.length; i++) {  //starts looping from i[1]
-      tailed.push(word[i]);                  //pushes every word
-    }
-    return tailed;                           //returns tailed array
+
+    return word.slice(1)         //return slice from 1            
 
   }
   
