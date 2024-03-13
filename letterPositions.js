@@ -46,3 +46,6 @@ assertArraysEqual(letterPosition("this is lighthouse").l, [8]);
 assertArraysEqual(letterPosition("this is lighthouse").h, [1, 11, 13]);
 assertArraysEqual(letterPosition("this is lighthouse").t, [0,12]);
 
+
+
+module.exports = letterPosition;
