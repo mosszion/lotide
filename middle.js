@@ -1,4 +1,5 @@
 
+//This function should return middle of an array
 
 const middle = function(ary) { //takes array input
 
@@ -6,11 +7,11 @@ const middle = function(ary) { //takes array input
     return [];
   } else {
     let half = ary.length / 2;  //divide length into half
-    if (ary.length % 2 === 0) {
+    if (ary.length % 2 === 0) { //check if even number elements
       
-      return [ary[half - 1],ary[half]];
+      return [ary[half - 1],ary[half]]; //returns two middle values for even
     } else {
-      return [ary[Math.floor(half)]];
+      return [ary[Math.floor(half)]];  //returns one middle for odd numbered
 
     }
   }
