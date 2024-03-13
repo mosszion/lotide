@@ -19,7 +19,7 @@ const countOnly = function(arrayNames, namesToCount) {
  
 
   if (arrayNames.length < 1) {
-    return `😱 Ohh no !! No one has attended sofar!!`;
+    return `Noone`;
   } else {
     for (let i = 0; i < arrayNames.length; i++) {
       if (namesToCount[arrayNames[i]]) {

@@ -1,7 +1,7 @@
 
 
-const head = function(data) { //head function takes data array
-  return data[0];  //returns data[0] that is the head
+const head = function(list) { //head function takes array
+  return list[0];  //returns data[0] that is the head
 };
 
 

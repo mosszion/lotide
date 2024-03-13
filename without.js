@@ -49,6 +49,7 @@ const without = function(array1, array2) {
 
 without([1,2,3,4], [2,4]);
 
+
 const words = ["hello", "world", "lighthouse"];
 const trimmed = without(words, ["lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
