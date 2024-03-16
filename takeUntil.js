@@ -27,7 +27,7 @@ const assertArraysEqual = function(arr1, arr2) {
 
 
 //takeUntil function block
-// the function takeUntil takes an array and callback and returns a mini array after its passed the callback function
+// the function takeUntil takes an array and callback and returns another array after its passed through the callback function
 const takeUntil = function(array, callback) { //takes an array and a callback
   const result = [];
   for (let item of array) {  // iterates items of array

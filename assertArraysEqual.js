@@ -1,4 +1,4 @@
-const eqArrays = require ('./eqArrays');
+const eqArrays = require ('./eqArrays'); //import eqArrays function
 
  const assertArraysEqual = function(arr1, arr2) {  //intialize an assertArraysEqual fn with two array arguments
   let result = eqArrays(arr1, arr2);

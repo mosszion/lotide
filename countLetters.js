@@ -10,7 +10,10 @@ const assertEqual = function(actual, expected) {
 
 
 };
-const countLetter = function(str) {
+
+// This function returns the number of instances of each letter in a given string
+
+const countLetter = function(str) {  //takes string input
   const allLetters = [];
   for (let letter of str) {
     allLetters.push(letter);
@@ -18,13 +21,13 @@ const countLetter = function(str) {
   const result = { };
  
   for (let item of allLetters) {
-    if (item !== ' ') {
-      result[item] = (result[item] || 0) + 1;
+    if (item !== ' ') {                   // ignores blank space
+      result[item] = (result[item] || 0) + 1;  //count number of instances
 
     }
     
   }
-  return result;
+  return result;  //returns object with key value representation
 };
 
 console.log(countLetter("this is mine"));

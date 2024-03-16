@@ -11,15 +11,15 @@ const assertEqual = function(actual, expected) {
 
 };
 
-
-const countOnly = function(arrayNames, namesToCount) {
+//Function which helps to count list memebrs in a certain criteira
+const countOnly = function(arrayNames, namesToCount) {  //takes an array and an object as arguments
   let countedItem = {
 
   };
  
 
   if (arrayNames.length < 1) {
-    return `Noone`;
+    return {};  //return empty object for empty array
   } else {
     for (let i = 0; i < arrayNames.length; i++) {
       if (namesToCount[arrayNames[i]]) {

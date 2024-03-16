@@ -21,11 +21,8 @@ const findKeyByValue = function(obj, value) {  //find key takes  two arguments :
   const keysOfObj = Object.keys(obj);  //puts all keys into keysOfObj array
   
   for (let key of keysOfObj) { //iterate through the elements in keysOfObj
-    
-    let valOfObj = obj[key];  //assigns obj[key] to valOfObj 
-    
-   
-    if (valOfObj === value) { // checks the value of the key with the value given in the argument
+        
+    if (obj[key] === value) { // checks the value of the key with the value given in the argument
       return key; //returns the key if found true 
     }
   }

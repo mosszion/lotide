@@ -21,11 +21,13 @@ const assertArraysEqual = function(arr1, arr2) {
     console.log(`❌❌❌ Test Failed: Arrays are not equal.`);
   }
  }
-const flatten = function(arr) {
+
+ // This function takes in an array with other arrays inside, it can flatten it into a single-level array.
+const flatten = function(arr) {   //takes in array input
   let flattened =[];
-  for (item of arr) {
-    if (Array.isArray(item)){
-      for (let inside of item) {
+  for (item of arr) {    //looping through array elements
+    if (Array.isArray(item)){    //checks if element is an array
+      for (let inside of item) {  
        
         flattened.push(inside);
       }
@@ -38,12 +40,12 @@ const flatten = function(arr) {
 
 
  }
- return flattened;
+ return flattened;   //returns the flattened result
 };
 
 console.log(flatten([1,2,[3,4],[2,4]]));
-assertArraysEqual(flatten([1,2,[3,4],[2,4]]), [1,2,[3,4],[2,4]]);
-console.log(eqArrays(flatten([1,2,[3,4],[2,4]]), [1,2,[3,4],[2,4]]));
+assertArraysEqual(flatten([1,2,[3,4],[2,4]]),[1,2,3,4,2,4]);
+console.log(eqArrays(flatten([1,2,[3,4],[2,4]]), [1,2,3,4,2,4]));
 
 
 module.exports = flatten;

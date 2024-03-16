@@ -26,13 +26,14 @@ const eqArrays = function(firstArr, secondArr) {
    return false;
   }
  };
-
-const eqObjects = function (object1, object2) {
+// checks if two objects have the same keys and values
+// if not returns false
+const eqObjects = function (object1, object2) {    //takes two object inputs
 
   const keyOfObject1 =Object.keys(object1);
   const keyOfObject2 =Object.keys(object2);
   let eqObject = true;
-  if (keyOfObject1.length === keyOfObject2.length) {
+  if (keyOfObject1.length === keyOfObject2.length) {  //checks length of both objects
    
 
     for (let key of keyOfObject1) {

@@ -26,11 +26,8 @@ const findKey = function (object, callback) {
   const keysOfObj = Object.keys(object);  //puts all keys into keysOfObj array
   
   for (let key of keysOfObj) { //iterate through the elements in keysOfObj
-    
-    let valOfObj = object[key];  //assigns obj[key] to valOfObj 
-    
-   
-    if (callback(valOfObj)) { // checks the value of the key with the value given in the argument
+       
+    if (callback(object[key])) { // checks the value of the key with the value given in the argument
       return key; //returns the key if found true 
     }
   }

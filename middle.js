@@ -1,5 +1,5 @@
 
-//This function should return middle of an array
+//This function should take in and return middle of an array
 
 const middle = function(ary) { //takes array input
 

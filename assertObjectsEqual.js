@@ -27,7 +27,9 @@ const eqArrays = function(firstArr, secondArr) {
   }
  };
 
-const eqObjects = function (object1, object2) {
+// This function checks two objects for equality
+ 
+const eqObjects = function (object1, object2) {  //function takes two objects
 
   const keyOfObject1 =Object.keys(object1);
   const keyOfObject2 =Object.keys(object2);

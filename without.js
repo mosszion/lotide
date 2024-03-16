@@ -21,15 +21,15 @@ const assertArraysEqual = function(arr1, arr2) {
     console.log(`❌❌❌ Test Failed: Arrays are not equal.`);
   }
 };
-
-const without = function(array1, array2) {
-  let result = [];
+//A function which takes in two arrays which will return a subset of a given array, removing unwanted elements. 
+const without = function(array1, array2) { //takes in two arrays
+  let result = [];   //initialize empty array
   
-  for (let i = 0; i < array1.length; i++) {
-    let isFound = false;
-    for (let j = 0; j < array2.length; j++) {
+  for (let i = 0; i < array1.length; i++) { //going through the first array
+    let isFound = false;    //define flag
+    for (let j = 0; j < array2.length; j++) {  //going through the second array
       if (array1[i] === array2[j]) {
-        isFound = true;
+        isFound = true;  //if found change flag status
      
      
       }
@@ -37,13 +37,13 @@ const without = function(array1, array2) {
 
     
     }
-    if (!isFound) {
+    if (!isFound) {   //if not found push the element to result 
       result.push(array1[i]);
     }
    
   }
 
-  return result;
+  return result;  //return result
 };
 
 

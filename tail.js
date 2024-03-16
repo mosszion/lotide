@@ -1,7 +1,7 @@
-
-const tail = function(word) { //takes input array
+// This function takes in an array and returns another array ommiting the first element
+const tail = function(arr) { //takes input array
   
-    return word.slice(1)         //return slice from 1            
+    return arr.slice(1)         //return slice from 1            
 
   
  

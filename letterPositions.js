@@ -22,21 +22,22 @@ const assertArraysEqual = function(arr1, arr2) {
     console.log(`❌❌❌ Test Failed: ${arr1} !== ${arr2} are not equal.`);
   }
 };
-const letterPosition = function(sentence) {
-  const results = {
+// This function takes in a string and will return all the indices in the string where each character is found.
+const letterPosition = function(sentence) {   //takes in a string 
+  const results = {     //intialize an empty object
 
   };
-  for (let index = 0; index < sentence.length; index++) {
-    const letter = sentence[index];
-    if (letter !== ' ') {
-      if (!results[letter]) {
-        results[letter] = [];
+  for (let index = 0; index < sentence.length; index++) {  //going through the letters in the string
+    const letter = sentence[index];   //initialize a letter
+    if (letter !== ' ') {             //checks if letter is a white space
+      if (!results[letter]) {   //if not found result object 
+        results[letter] = [];    // create an empty array
       }
-      results[letter].push(index);
+      results[letter].push(index);  //if alredy present, add its index into the list
     }
   }
 
-  return results;
+  return results;  //returns result object
 };
 console.log(letterPosition("this is lighthouse"));
 

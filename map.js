@@ -29,8 +29,11 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 // Our map function block starts here 
+/*This function takes an array and a callback function as arguments, and returns a new array containing the results of calling
+ the callback function with each element of the original array.
+ */
 const words = ["This", "is", "the", "lighthouse", "map", "example"]; //given array of words
-const map = function (array, callback) { // defining our map function
+const map = function (array, callback) { // defining our map function, takes in array and callback function 
   const result = []; //
   for (let item of array) {
     result.push(callback(item));
